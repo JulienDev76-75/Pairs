@@ -49,6 +49,24 @@ function Intervalles () {
 // function intervalles() {
 //     setInterval(function(){}, 3000);
 
+// function timer() {
+//     let seconds = 45;
+//     let timer = document.getElementById("timer");
+//     timer.innerHTML = "<i class='fas fa-hourglass-start ml-2'></i> Temps restant : " + seconds + " s";
+//     setInterval(function(){
+//       if(seconds >= 1) {
+//         seconds --;
+//         timer.innerHTML = "<i class='fas fa-hourglass-start ml-2'></i> Temps restant : " + seconds + " s";
+//       }
+//       else {
+//         restartGame(false);
+//       }
+//     }, 1000);
+//   }
+
+  let startingMinute = 1;
+  let time = startingMinute * 60;
+
 
 
 

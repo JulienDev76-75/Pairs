@@ -38,16 +38,7 @@ function shuffle(array) {
     return array;
 };
 
-//Game is beggining when the player pick a card
-for(let i = 0;i < card.length;i++) {
-    card[i].onclick= function(){
-        card[i].classList.remove("bg-dark");
-        card[i].style.backgroundColor = cardColors[i];
-        cardAssociate.push(card[i]);
-        Intervalles ();
-    }
-};
-
+//function to determinate the time to compare 2 cards
 function Intervalles () {
     //if the player is chosing 2 cards only, cardAssociate contains 2 items, comparaison start
     if (cardAssociate.length === 2) {
@@ -63,7 +54,7 @@ function Intervalles () {
      };
 }
 
- function comparaison () {
+function comparaison () {
     //if style.background items in CardAssociate array are same
     if (cardAssociate[0].style.backgroundColor === cardAssociate[1].style.backgroundColor){
         //the victory is defined by score declared as variable upside, score start at zero and increase if pairs are found
@@ -80,7 +71,7 @@ function Intervalles () {
         cardAssociate[0].classList.add("bg-dark");
         cardAssociate[1].classList.add("bg-dark");
         cardAssociate.length = 0;
-    }
+        }
     };
 }
 
@@ -115,7 +106,7 @@ for(let i = 0;i < card.length;i++) {
 };
 
 //if the player appuie sur Jouer alors il peut jouer, sinon les cards sont en display : none
-
+//1. displaynonepourcards 2. si le joueur clique sur button jouer alors 3. display block
 
 
 

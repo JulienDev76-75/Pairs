@@ -1,3 +1,4 @@
+/* Css valable until 768px, this is responsive from 320px until 768px by default */
     main, footer {
         font-family: 'Lobster', cursive;
     } 
@@ -5,37 +6,62 @@
     header
     {
         background-color: #FFD9AA;
-        height : 20vh;
+        background-attachment: fixed;
+        height : auto;
         width : 100%;
+        display : flex;
+        justify-content : center;
+    }
+    
+    .logo
+    {
+        margin-top : 2%;
+        max-width : 100%;
+        height : auto;
+    }
+
+    header
+    {
+        background-color: #FFD9AA;
+        background-attachment: fixed;
+        height : 20vh;
+        height : auto;
     }
 
     header img
-    {
-        width : 35%;
-        height : 35%;
+    {       
         margin-top : 2%;
-        margin-bottom : 2%;
+        max-width: 50%; 
+        height: auto; 
+        padding-bottom : 3%;
     }
 
-    footer
+    main 
     {
-        background-color: #FFD9AA;
-        height : 30vh;
-        width : 100%;
+        font-size: 1em;
+        color :white;
     }
 
-    footer .lastWords
+    #timer
     {
-        margin-top : 2%;
-        display : flex;
-        flex-direction: column;
-        align-items : center;
-        font-size: 0.8em;
+        display : inline-block;
+        border-radius: 4px;
+        max-width : 20%;
     }
 
-    footer .small
+    button
     {
-        font-size: 0.7em;
+        margin-top : 10px;
+        width : 20%;
+        height : auto;
+    }
+
+    main p
+    {
+        border : 2px solid black;
+        border-radius: 5px;
+        margin-top : 1%;
+        width : 25%;
     }
 
     .card
@@ -51,65 +77,62 @@
         height : 50px;
     }
 
-    main 
+    footer
     {
-        font-size: 1em;
+        background-color: #FFD9AA;
+        height : 20vh;
+        width : 100%;
+        height : auto;
     }
 
-    #timer
+    footer .lastWords
     {
-        display : inline-block;
-        border-radius: 4px;
+        font-size: 0.7em;
+        display : flex;
+        flex-direction: column;
+        align-items : center;
+        max-width : 100%;
+        height : auto;
+        padding-bottom : 2%;
     }
 
-    button
+    footer .small
     {
-        margin-top : 20px;
-        width : 10%;
+        display : none;
     }
-
-    main p
-    {
-        border : 2px solid black;
-        border-radius: 5px;
-        margin-top : 1%;
-        width : 10%;
-    }
-
-
-
 
 /*animation : webkit-transform, moz-transform, ms-transform, o-transform, transform : rotateXouY (180 degré pâr ex), webkit-transition/moz-transition etc.; webkit-transform-style : preserve 3D; */
 @media screen and (min-width: 768px)
 {
     .card{
-        width : 15vw;
+        width : 20vw;
         height : 10vh;
     }
     
     .col
     {
-        width : 15vw;
+        width : 20vw;
         height : 10vh;
     }
 
-    header
+    .logo
     {
-        height : 30vh;
+        margin-top : 2%;
+        max-width : 100%;
+
     }
 
-    header img 
-    {
-        width : 35%;
-        height : 25%;
-        margin-top : 1%;
-        margin-bottom : 1%;
+    header img
+    {       
+        max-width : 60%;
+        height : auto;
+        padding-bottom : 3%;
     }
 
     footer
     {
         background-color: #FFD9AA;
-        height : 35vh;
+        height : 20vh;
         width : 100%;
     }
 
@@ -124,13 +147,14 @@
 
     footer .small
     {
+        display : block;
         font-size: 0.8em;
     }
 }
 
 /*animation : webkit-transform, moz-transform, ms-transform, o-transform, transform : rotateXouY (180 degré pâr ex), webkit-transition/moz-transition etc.; webkit-transform-style : preserve 3D; */
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1024px)
 {
     .card{
         width : 10vw;
@@ -145,15 +169,31 @@
 
     header
     {
-        height : 40vh;
+        height : 25vh;
+    }
+
+    .logo
+    {
+        margin-top : 1%;
+        margin-bottom : 2%;
+        max-width : 100%;
     }
 
     header img 
     {
-        margin-top : 2%;
-        margin-bottom : 2%;
-        width : 25%;
-        height : 25%;
+        max-width : 60%;
+        height : auto;
+        padding-bottom: 4%;
+    }
+
+    button
+    {
+        width : 15%;
+    }
+
+    main p
+    {
+        width : 15%;
     }
 
     footer  
@@ -170,7 +210,13 @@
     }
 }
 
+@media screen and (min-width: 1900px){
 
-
+    header img 
+    {
+        max-width : 70%;
+        height : auto;
+    }
+}
 
 

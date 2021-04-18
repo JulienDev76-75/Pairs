@@ -1,7 +1,5 @@
-
-
     main, footer {
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Lobster', cursive;
     } 
 
     header
@@ -58,13 +56,26 @@
         font-size: 1em;
     }
 
-    .timer
+    #timer
     {
         display : inline-block;
-        background : green;
         border-radius: 4px;
-        text-align : center;
     }
+
+    button
+    {
+        margin-top : 20px;
+        width : 10%;
+    }
+
+    main p
+    {
+        border : 2px solid black;
+        border-radius: 5px;
+        margin-top : 1%;
+        width : 10%;
+    }
+
 
 
 

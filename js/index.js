@@ -2,9 +2,37 @@
 let cardColors =  ["red","yellow", "green", "pink", "purple", "blue", "brown", "red","yellow", "green", "pink", "purple", "blue", "brown"];
 let cardAssociate = [];
 let score = 0;
-var time = 30;
-
+let timeleft = 30;
 let card = document.getElementsByClassName("card");
+let countDownDate = document.getElementById("timer");
+
+function timer () {
+    let downloadTimer = setInterval(function(){
+    timeleft--;
+    countDownDate.textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+        card[i].classList.remove("bg-dark");
+    },1000);
+}
+//Apply the Fisher-Yates method to "randomize" cardColors Array
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+};
+shuffle(cardColors);
+
+//Gme is beggining when the player pick a card
 for(let i = 0;i < card.length;i++) {
     card[i].onclick= function(){
         card[i].classList.remove("bg-dark");
@@ -16,7 +44,7 @@ for(let i = 0;i < card.length;i++) {
 
 function Intervalles () {
     if (cardAssociate.length === 2) {
-        setTimeout(function () {comparaison()}, 1000);
+        setTimeout(function () {comparaison()}, 1100);
     }
      else if (cardAssociate.length > 2){
          alert("Ne choisissez que deux cartes");
@@ -30,7 +58,15 @@ function Intervalles () {
     if (cardAssociate[0].style.backgroundColor === cardAssociate[1].style.backgroundColor){
         score += 1;
         cardAssociate.length = 0;
+        findWinner(); 
     }
+    // else if (cardAssociate[0].style.backgroundColor === cardAssociate[0].style.backgroundColor) {
+
+    //     score += 0;
+    //     alert("c'est complètement idiot de sélectionner la même carte");
+    //     cardAssociate.length = 0;
+        
+    // }
     else {
         for(let i = 0;i < cardAssociate.length;i++) {
         score += 0;
@@ -41,16 +77,12 @@ function Intervalles () {
     };
 }
 
-function winner () {
-    if (score = 7){
-        alert ("bravo");
-    }
+function findWinner(){
+    if (score === 7){
+        alert ("bravo vous avez gagné !");
+    };
 }
-//     function choixPlayer() {
-//     if (cardAssociate[0] === cardAssociate[1]) {
-//         card[i].style.visibility = "visible";
-//           score ++;
-//         }
+
 
 // function timer() {
 //     let seconds = 45;
@@ -67,8 +99,14 @@ function winner () {
 //     }, 1000);
 //   }
 
-//   let startingMinute = 1;
-//   let time = startingMinute * 60;
+
+
+// Set the date we're counting down to
+
+
+
+
+
 
 
 

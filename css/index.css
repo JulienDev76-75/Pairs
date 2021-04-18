@@ -1,0 +1,165 @@
+
+
+    main, footer {
+        font-family: 'Dancing Script', cursive;
+    } 
+
+    header
+    {
+        background-color: #FFD9AA;
+        height : 20vh;
+        width : 100%;
+    }
+
+    header img
+    {
+        width : 35%;
+        height : 35%;
+        margin-top : 2%;
+        margin-bottom : 2%;
+    }
+
+    footer
+    {
+        background-color: #FFD9AA;
+        height : 30vh;
+        width : 100%;
+    }
+
+    footer .lastWords
+    {
+        margin-top : 2%;
+        display : flex;
+        flex-direction: column;
+        align-items : center;
+        font-size: 0.8em;
+    }
+
+    footer .small
+    {
+        font-size: 0.7em;
+    }
+
+    .card
+    {
+        width : 50px;
+        height : 50px;
+        border-radius: 10px;
+    }
+
+    .col
+    {
+        width : 50px;
+        height : 50px;
+    }
+
+    main 
+    {
+        font-size: 1em;
+    }
+
+    .timer
+    {
+        display : inline-block;
+        background : green;
+        border-radius: 4px;
+        text-align : center;
+    }
+
+
+
+/*animation : webkit-transform, moz-transform, ms-transform, o-transform, transform : rotateXouY (180 degré pâr ex), webkit-transition/moz-transition etc.; webkit-transform-style : preserve 3D; */
+@media screen and (min-width: 768px)
+{
+    .card{
+        width : 15vw;
+        height : 10vh;
+    }
+    
+    .col
+    {
+        width : 15vw;
+        height : 10vh;
+    }
+
+    header
+    {
+        height : 30vh;
+    }
+
+    header img 
+    {
+        width : 35%;
+        height : 25%;
+        margin-top : 1%;
+        margin-bottom : 1%;
+    }
+
+    footer
+    {
+        background-color: #FFD9AA;
+        height : 35vh;
+        width : 100%;
+    }
+
+    footer .lastWords
+    {
+        margin-top : 2%;
+        display : flex;
+        flex-direction: column;
+        align-items : center;
+        font-size: 1.2em;
+    }
+
+    footer .small
+    {
+        font-size: 0.8em;
+    }
+}
+
+/*animation : webkit-transform, moz-transform, ms-transform, o-transform, transform : rotateXouY (180 degré pâr ex), webkit-transition/moz-transition etc.; webkit-transform-style : preserve 3D; */
+
+@media screen and (min-width: 1200px)
+{
+    .card{
+        width : 10vw;
+        height : 10vh;
+    }
+    
+    .col
+    {
+        width : 10vw;
+        height : 10vh;
+    }
+
+    header
+    {
+        height : 40vh;
+    }
+
+    header img 
+    {
+        margin-top : 2%;
+        margin-bottom : 2%;
+        width : 25%;
+        height : 25%;
+    }
+
+    footer  
+    {
+        height: 25vh;
+    }
+
+    footer .lastWords
+    {
+        margin-top : 3%;
+        display : flex;
+        flex-direction: column;
+        align-items : center;
+    }
+}
+
+
+
+
+
